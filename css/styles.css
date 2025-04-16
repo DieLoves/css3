@@ -3,6 +3,7 @@ a {
   text-decoration: none;
 }
 
+/* hover - псевдо-класс */
 a:hover {
   color: red;
 }
@@ -17,8 +18,10 @@ a:active {
 
 a:focus {
   font-weight: bold;
+  font-size: 20px;
 }
 
+/* Стилизация фрагментов текста (псевдо-элементы) */
 p::first-letter {
   font-size: 40px;
 }
@@ -27,6 +30,7 @@ p::first-line {
   text-decoration: underline;
 }
 
+/* selection не поддерживает многие стили для защиты (например font-size) */
 p::selection {
   background-color: yellow;
   color: red;
@@ -51,30 +55,26 @@ h1::after {
   color: green;
 }
 
-.list2 li:nth-child(even) {
+/* even/odd */
+.list2 li:nth-child(2) {
   color: blue;
 }
 
-.list2 li:nth-child(odd) {
+.list2 li:nth-child(3) {
   color: green;
 }
 
-.list3 li:nth-child(2) {
-  color: blue;
-}
-
-.list3 li:nth-child(3) {
-  color: green;
-}
-
+/* Каждый 3 элемент с первого */
 .list3 li:nth-child(3n + 1) {
   text-transform: uppercase;
 }
 
+/* Каждый 4-й элемент начиная со 2 */
 .list3 li:nth-child(4n + 2) {
   border: 1px solid black;
 }
 
+/* Селектора для дочерних типов элементов */
 .text span:first-of-type {
   color: red;
 }
@@ -86,24 +86,8 @@ h1::after {
 .text span:nth-of-type(2) {
   border: 1px solid black;
 }
-
+/* Псевдо-классическое отрицание (not) */
 .list4 li:not(.item) {
   border: 1px solid blue;
 }
-
-/* Selectors test
-li							        ===> 1
-#main .item					    ===> 110
-h1 + *[href="test"] 		===> 11
-#test p 					      ===> 101
-li.item.main				    ===> 21
-#test						        ===> 100
-ul ol li.item				    ===> 13
-ul li						        ===> 2
-#test:not(.main)			  ===> 101
-ul ol+li 					      ===> 3
-a:hover						      ===> 11
-p:first-line				    ===> 2
-h2 strong					      ===> 2
-span.test ul li				  ===> 13
-*/
+/* 1, 110, 11, 101, 21, 100, 13, 2, 120, 13, 11, 2, 2, 13 */
