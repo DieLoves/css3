@@ -1,31 +1,20 @@
 span,
 div {
   border: 10px solid red;
-  /* margin: 10px;
-  padding: 10px; */
+  margin: 10px;
+  padding: 10px;
+  padding: 10px 20px 30px 40px;
   margin: 10px 20px;
-  /* padding: 10px 20px 30px 40px; */
-  padding-top: 10px;
-  padding-right: 20px;
-  padding-bottom: 30px;
-  padding-left: 40px;
 }
 
-/* inline, block, inline-block */
-.test {
-  display: inline;
-}
-
-/* Doesn't work for inline element */
-span {
-  width: 100px;
-  height: 100px;
-}
-
+/* Если два разных margin стоят рядом, то суммарное расстояние между ними равно большему margin */
 .mar {
   margin-top: 50px;
   width: 100px;
   height: 100px;
-  display: inline-block;
   box-sizing: border-box;
+}
+
+.test {
+  display: inline;
 }
