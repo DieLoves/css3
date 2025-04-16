@@ -20,18 +20,22 @@
 }
 
 .item {
-  float: left;
   width: 150px;
+  float: left;
 }
 
 .item1 {
   background-color: crimson;
+  float: left;
 }
 
+/* float вырывает элемент из потока документа. Элементы перестают его видеть */
 .item2 {
   background-color: cyan;
+  float: right;
 }
 
 .item3 {
   background-color: blueviolet;
+  /* float: right; */
 }
