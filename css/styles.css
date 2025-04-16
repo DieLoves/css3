@@ -4,10 +4,10 @@
 
 /* visibility - скрывает, но оставляет место под элемент. В отличии от display none, не влияет на ранжировку  */
 .second {
-  /* visibility: hidden; */
+  visibility: hidden;
   /* opacity: 0; */
-  color: transparent;
-  cursor: default;
+  /* color: transparent;
+  cursor: default; */
 }
 
 .second::selection {
