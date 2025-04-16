@@ -4,11 +4,13 @@ body {
 
 h4 {
   border: 1px solid black;
-
-  position: absolute;
-  bottom: 150px;
+  /* position: absolute; */
+  /* bottom: 150px; */
 }
 
+/* relative - мы может управлять элементом. Создает пустое пространство (shadow element). Отступы высчитываются относительно текущего положения элементов на странице  */
+/* absolute - позиционирование идет относительно КРАЕВ (вверх, лево, право) документа (если на странице нет родителя с другим позиционированием не static) */
+/* fixed - позиционирование всегда от краев браузера */
 .test {
   border: 10px solid red;
   /* width: 100px; */
@@ -16,9 +18,20 @@ h4 {
   display: inline-block;
   box-sizing: border-box;
 
-  position: sticky;
+  /* position: relative;
   top: 20px;
+  right: 20px; */
+
+  /* position: fixed; */
+  position: sticky;
+  top: 30px;
   right: 20px;
-  min-width: 100px;
-  max-width: 300px;
+
+  /* position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 200px;
+  right: 20px; */
 }
