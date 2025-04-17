@@ -13,29 +13,79 @@ body {
   height: 200px;
   background-color: aqua;
 
-  /* animation-name: myAnimation;
-  animation-duration: 5s;
-  animation-timing-function: linear;
-  /* animation-iteration-count: infinite;
-  animation-direction: reverse;
-  animation-fill-mode: forwards;
-  animation-delay: 3s; */
+  /* Название анимации для привязки */
+  /* animation-name: myAnimation; */
+  /* Длительность */
+  /* animation-duration: 5s; */
+  /* Настройки времени */
+  /* animation-timing-function: linear; */
+  /* Сколько раз будет запущена анимация (infinity - будет работать постоянно) */
+  /* animation-iteration-count: infinite; */
+  /* Направление анимации */
+  /* normal - нормальное поведение. Анимация проигрывается вперёд каждую итерацию, то есть, когда анимация заканчивается, она сразу сбрасывается в начальное положение и снова проигрывается */
+  /* reverse - анимация в обратном порядке */
+  /* alternate - Анимация меняет направление в каждом цикле (в нечетных с начального положения, а в четных в обратном порядке) */
+  /* alternate-reverse - начинается с конца к началу, а потом от начала к концу и т.д3 */
+  /* animation-direction: normal; */
 
-  animation: bgChange 5s linear infinite, sizeChange 5s linear infinite;
+  /* как нужно применять стили к объекту анимации до и после её выполнения. */
+  /* none - Стили анимации не будут применены к элементу после выполнения */
+  /* forwards - после конца анимации элемент сохранит последний ключевой кадр 
+  (определяется значением animation-direction и animation-iteration-count) */
+  /* backwards - элемент сохранит стиль первого ключевого кадра на протяжении периода animation-delay. Первый ключевой кадр определяется значением animation-direction: */
+  /* both - элемент сохранит стиль первого ключевого кадра (backwards), а потом сохранит последний ключевой кадр (forwards). По-сути анимация будет вести себя так, как будто значения forwards и backwards заданы одновременно. */
+  /* animation-fill-mode: both; */
+  /* Задержка перед выполнением анимации */
+  /* animation-delay: 5s; */
+
+  /* animation: name duration timing-function delay iteration-count direction fill-mode */
+  animation: bgChange 5s infinite, sizeChange 5s infinite;
 }
 
 .example:hover {
+  /* Управление воспроизведением анимации (paused, running) */
   animation-play-state: paused;
 }
 
+@keyframes myAnimation {
+  /* Свойства с которых будут изменяться */
+  from {
+    background-color: aqua;
+  }
+
+  /* Промежуточный */
+  50% {
+    background-color: red;
+    transform: scale(1.2);
+  }
+
+  /* Значения, к которым эти свойства придут */
+  to {
+    background-color: green;
+    transform: scale(1.4);
+  }
+}
+
 @keyframes bgChange {
-  from { background-color: aqua; }
-  50% { background-color: red; }
-  to { background-color: green; }
+  from {
+    background-color: aqua;
+  }
+  50% {
+    background-color: red;
+  }
+  to {
+    background-color: green;
+  }
 }
 
 @keyframes sizeChange {
-  from { transform: scale(1); }
-  50% { transform: scale(1.2); }
-  to { transform: scale(1); }
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
 }
