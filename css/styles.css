@@ -12,18 +12,26 @@ body {
   border: 1px solid black;
   width: 150px;
   min-height: 150px;
+  /* overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; */
 
-  /* overflow: hidden; */
-  /* text-overflow: ellipsis; */
-  /* white-space: nowrap; */
+  /* Разделение слова */
   word-wrap: break-word;
+  /* Разбить слова (по символам и т.д.) */
   word-break: break-all;
-  writing-mode: vertical-rl;
+  /* Направление текста */
+  writing-mode: vertical-lr;
 }
 
 .container {
+  /* Кол-во колонок */
   column-count: 3;
+  /* Граница колонок (разделяет) */
+  /* Толщина, тип, цвет */
   column-rule: 1px solid black;
+  /* Ширина колонок (auto) */
   column-width: 300px;
+  /* Расстояние между колонками */
   column-gap: 100px;
 }
