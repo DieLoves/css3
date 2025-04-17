@@ -11,26 +11,48 @@ body {
   border: 2px solid black;
   height: 169px;
 
+  /* Если что-то выходит за границы этого элемента — не показывай это */
   /* overflow: hidden; */
 }
 
 img {
   transition: all 1s ease;
+  /* Правый нижний */
+  /* transform-origin: right bottom; */
+
+  /* 50px вправо 100 вниз */
   transform-origin: 50px 100px;
 }
 
+/* transform изменяет визуальное представление элемента, не влияя на его положение в потоке документа. */
 img:hover {
+  /* Поворот */
   /* transform: rotate(360deg); */
-  /* transform: scale(0.2, 1.2); */
-  /* transform: scaleX(0.2); */
-  /* transform: scaleY(1.2); */
-  /* transform: scale(1.2); */
-  /* transform: translate(-50px, -80px); */
-  /* transform: translateX(50px); */
-  /* transform: translateY(80px); */
-  /* transform: skew(0, 45deg); */
-  /* transform: skewX(45deg); */
-  /* transform: skewY(45deg); */
+
+  /* Масштабирование (от 0 до 1 - уменьшают, а от 1 до бесконечности - увеличивает) */
+  /* масштабирование по x и y */
+  /* Перемножает высоту или ширину элемента на параметры scale */
+  transform: scale(1.2);
+  /* scaleX, scaleY взаимоисключающие друг-друга. Будет применена только последняя трансформация */
+  /* transform: scaleX(2);
+  transform: scaleY(2); */
+
+  /* Смешение */
+  /* Можно передать x,y */
+  /* transform: translate(2px, 5px); */
+  /* translateX, translateY взаимоисключающие друг-друга. Будет применена только последняя трансформация */
+  /* transform: translateX(50px);
+  transform: translateY(50px); */
+
+  /* Наклон */
+  /* x, y (по гор. оси и по верт.) */
+  /* transform: skew(0deg, 50deg); */
+  /* skewX, skewY взаимоисключающие друг-друга. Будет применена только последняя трансформация */
+  /* transform: skewX(45deg);
+  transform: skewY(45deg); */
+
+  /* Поворот на 5 гр. увеличение на 1.2 и наклон на 10 гр. */
   /* transform: rotate(10deg) scale(1.2) skew(10deg); */
+
   transform: rotate(90deg);
 }
