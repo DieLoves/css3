@@ -7,6 +7,18 @@ body {
   font-family: monospace;
 }
 
+/* screen - Устройства с дисплеями */
+/* print - для печати (предварительный просмотр)  */
+/* all - все устройства */
+/* speech - скринридеры */
+
+/* Правила запросов */
+/* Разделяются and - обязательное выполнение всех условий */
+/* Разделяется , - выполнение хотя бы одного условия */
+/* not - отрицание условий */
+
+/* device-aspect-ratio - отношение ширины устройства к высоте */
+/* min-resolution - плотность пикселей устройства вывода */
 @media screen and (min-width: 992px) and (max-width: 1200px) {
   body {
     background-color: aqua;
@@ -21,6 +33,6 @@ body {
 
 @media print {
   body {
-    color: blue;
+    font-size: 20px;
   }
 }
