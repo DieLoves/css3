@@ -9,17 +9,20 @@ body {
 
 table,
 table * {
-  max-width: 600px;
   border: 1px solid black;
+  max-width: 500px;
+  /* collapse - объединяет смежные границы в одну */
+  /* separate - отдельные границы */
   border-collapse: separate;
-  /* border-spacing: 10px; */
-  caption-side: top;
+  /* Расстояние между границами (x,y) */
+  /* border-spacing: 10px 50px; */
 
-  min-width: 100px;
+  /* Положение заголовка таблицы */
+  caption-side: bottom;
   text-align: right;
-  vertical-align: baseline;
-  empty-cells: hide;
-  cursor: pointer;
+  vertical-align: middle;
+
+  cursor: crosshair;
 }
 
 .dis,
