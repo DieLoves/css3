@@ -13,13 +13,27 @@ body {
   height: 200px;
   background-color: aqua;
 
-  /* transition-duration: 500ms, 2s;
-  transition-property: transform, background-color;
-  transition-delay: 0, 10s;
+  /* Настройка длительности перехода */
+  /* transition-duration: 500ms, 2s; */
+  /* Какое свойство должно осуществлять переход (all - все свойства) */
+  /* transition-property: transform, background-color; */
+  /* Задержка (длительность до начала перехода) */
+  /* transition-delay: 0, 500ms;
   transition-timing-function: linear; */
 
-  transition: all 1s ease .5s;
+  /* transition-property, transition-duration, transition-timing-function, transition-delay */
+  transition: all 1s ease 0.5s;
 }
+
+/* ease (стандартное) - начало - медленно, середина - повышается, конец - замедляется  */
+/* ease-in - начало - медленно, к концу ускорение  */
+/* ease-out - начало - быстрое, к концу замедление */
+/* ease-in-out - начало и конец - медленное */
+/* linear - скорость выполнения постоянное */
+/* step-start - моментальный переход. Плавности нет */
+/* step-end - быстрый переход через заданное время. Анимаций нет */
+/* steps - ступенчато. Параметры - кол-во шагов (за которое пройдет трансформация), start/end - когда начнется переход (в начале 1 шага или в конце) */
+/* cubic-bezier - создание своей анимации на основании кривой Безье  */
 
 .example:hover {
   background-color: red;
