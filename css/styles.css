@@ -14,46 +14,36 @@ input {
 }
 
 ::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: blue;
-  opacity: 1; /* Firefox */
-}
-
-::-ms-input-placeholder {
-  /* Edge */
-  color: blue;
-}
-
-:-ms-input-placeholder {
-  /* IE 10-11 */
   color: blue;
 }
 
 ::-webkit-scrollbar {
   width: 25px;
-  background: #101124;
+  background: black;
 }
 
+/* Стилизация подложки */
 ::-webkit-scrollbar-track {
   border: 5px solid rgba(255, 255, 255, 0.25);
   box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, 0.5);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #00ffa1, #00ffff);
+  background: linear-gradient(45deg, #00ffa1, aqua);
   border-radius: 15px;
 }
 
 button {
   width: 200px;
-  height: 79px;
-  background-image: url(./23.png);
+  height: 80px;
+  background-image: url("23.png");
   background-position: top;
   background-size: cover;
   text-indent: -9999px;
-  border: none;
   background-color: transparent;
-  outline: grey;
+  cursor: pointer;
+  border: none;
+  outline: gray;
 }
 
 button:hover {
